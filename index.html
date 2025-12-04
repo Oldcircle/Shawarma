@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Shawarma Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Nunito:wght@400;700;800&display=swap');
+      
+      body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #fff7ed; /* Orange-50 */
+        background-image: 
+          radial-gradient(#fed7aa 2px, transparent 2px);
+        background-size: 32px 32px;
+        color: #431407;
+      }
+      
+      .title-font {
+        font-family: 'Fredoka', cursive;
+      }
+
+      /* Custom animations */
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 8s linear infinite;
+      }
+
+      @keyframes bounce-short {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      .animate-bounce-short {
+        animation: bounce-short 0.3s ease-in-out;
+      }
+      
+      /* Stripe pattern for awning */
+      .awning-stripes {
+        background: repeating-linear-gradient(
+          90deg,
+          #ef4444,
+          #ef4444 40px,
+          #fef2f2 40px,
+          #fef2f2 80px
+        );
+      }
+
+      /* Scrollbar hiding */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root" class="min-h-screen flex items-center justify-center py-4 px-4"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
